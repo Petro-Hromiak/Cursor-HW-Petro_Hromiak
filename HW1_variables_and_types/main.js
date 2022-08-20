@@ -6,7 +6,7 @@ const minPrice = Math.min(apple, cherry, lemon);
 const total = apple + cherry + lemon;
 const totalRound = Math.floor(apple) + Math.floor(cherry) + Math.floor(lemon);
 const roundToHundreds = Math.round(totalRound / 100) * 100;
-const evenOdd = (totalRound % 2 == 0) ? true : false;
+const evenOdd = (Math.floor(total) % 2 == 0) ? true : false;
 const value = 500;
 const rest = value - total;
 const arrProduct = [apple, cherry, lemon];
@@ -20,7 +20,7 @@ document.write(`<b>Максимальна ціна:</b> ${maxPrice} <br>
 <b>Вартість всіх товарів:</b> ${total} <br> 
 <b>Вартість всіх товарів(округлення товарів окремо):</b> ${totalRound} <br> 
 <b>Вартість всіх товарів округлена до сотень:</b> ${roundToHundreds} <br> 
-<b>Булеве значення парне чи непарне число:</b> ${evenOdd} <br> 
+<b>Булеве значення true(парне) чи false (непарне) число:</b> ${evenOdd} <br> 
 <b>Сума решти:</b> ${rest} <br><b> Середнє значення цін:</b> ${average} <br> 
 <b>Сума до оплати зі знижкою  ${discount}%: </b>${valueWithDiscount} <br> 
 <b>Чистий прибуток:</b> ${profit}
