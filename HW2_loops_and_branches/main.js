@@ -1,7 +1,6 @@
 let numberN = +prompt('Введіть початкове значення');
 let numberM = +prompt('Введіть кінцеве значення');
-let evenOrOdd = confirm('Чи бажаєте пропускати парні числа', true);
-let sum = 0;
+
 
 while (!Number.isInteger(numberN) || numberN == '') {
     numberN = +prompt(`Початкове значення не є числом або не є цілим числом, будь-ласка введіть ціле число`);
@@ -14,6 +13,10 @@ while (numberN >= numberM) {
     numberM = +prompt(`Кінцеве значення є меншим або рівним початковому, введіть кінцеве значення`);
 
 }
+let evenOrOdd = confirm('Чи бажаєте пропускати парні числа', true);
+
+let sum = 0;
+
 for (let i = numberN; i <= numberM; i++) {
     if (evenOrOdd && i % 2 == 0) {
         continue
