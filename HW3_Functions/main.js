@@ -4,7 +4,7 @@ function getMaxDigit(num) {
     return Math.max(...(String(num).split('')))
 }
 // const getMaxDigit = num => Math.max(...(String(num).split('')));
-console.log(getMaxDigit(1236));
+// console.log(getMaxDigit(1236));
 
 // function 2
 function calcDegree(num, pow) {
@@ -14,13 +14,15 @@ function calcDegree(num, pow) {
     }
     return degree
 };
-console.log(calcDegree(2, 3));
+// console.log(calcDegree(2, 3));
+
 
 // function 3
 function getFirstLetterUpperCase(name) {
     return name[0].toUpperCase() + name.slice(1).toLowerCase();
 }
-console.log(getFirstLetterUpperCase('PeTro'))
+// console.log(getFirstLetterUpperCase('PeTro'));
+
 
 
 // function 4
@@ -28,13 +30,15 @@ function tax(salary) {
     const taxSum = 19.5;
     return salary * ((100 - taxSum) / 100);
 }
-console.log(tax(1000));
+// console.log(tax(1000));
+
 
 // function 5 
 function getRandomNumber(N, M) {
     return Math.floor(Math.random() * (M - N) + N);
 }
-console.log(getRandomNumber(1, 10));
+// console.log(getRandomNumber(1, 10));
+
 
 // function 6
 function countLetter(letter, word) {
@@ -48,7 +52,7 @@ function countLetter(letter, word) {
     }
     return counter;
 }
-console.log(countLetter("А", "Асталавіста"));
+// console.log(countLetter("А", "Асталавіста"));
 
 
 // function 7
@@ -66,7 +70,8 @@ function convertCurrency(sum) {
     }
     return result;
 }
-console.log(convertCurrency(`100$`));
+// console.log(convertCurrency(`100$`));
+
 
 // function 8
 function getRandomPassword(lengthPass = 8) {
@@ -76,7 +81,8 @@ function getRandomPassword(lengthPass = 8) {
     }
     return password;
 }
-console.log(getRandomPassword(4));
+// console.log(getRandomPassword(4));
+
 
 
 //  function 9
@@ -91,7 +97,8 @@ function deleteLetter(letter, word) {
     }
     return newWord;
 }
-console.log(deleteLetter('a', "blablabla"));
+// console.log(deleteLetter('a', "blablabla"));
+
 
 
 // function 10
@@ -100,7 +107,8 @@ function isPalyndrom(str) {
     let reverseStr = lowerStr.split('').reverse().join('');
     return reverseStr === lowerStr;
 }
-console.log(isPalyndrom("Я несу гусеня"));
+// console.log(isPalyndrom("Я несу гусеня"));
+
 
 // function 11
 function deleteDuplicateLetter(sentence) {
@@ -116,4 +124,18 @@ function deleteDuplicateLetter(sentence) {
     }
     return newSentence;
 }
-console.log(deleteDuplicateLetter("Бісквіт був дуже ніжним"));
+// console.log(deleteDuplicateLetter("Бісквіт був дуже ніжним"));
+
+document.writeln(`Функція 1. ${getMaxDigit(1236)} <br>`);
+document.writeln(`Функція 2. ${calcDegree(2, 3)} <br>`);
+document.writeln(`Функція 3. ${getFirstLetterUpperCase('PeTro')} <br>`);
+document.writeln(`Функція 4. ${tax(1000)} <br>`);
+document.writeln(`Функція 5. ${getRandomNumber(1, 10)} <br>`);
+document.writeln(`Функція 6. ${countLetter("А", "Асталавіста")} <br>`);
+document.writeln(`Функція 7. ${convertCurrency(`100$`)} <br>`);
+document.writeln(`Функція 8. ${getRandomPassword(4)} <br>`);
+document.writeln(`Функція 9. ${deleteLetter('a', "blablabla")} <br>`);
+document.writeln(`Функція 10. ${isPalyndrom("Я несу гусеня")} <br>`);
+document.writeln(`Функція 11. ${deleteDuplicateLetter("Бісквіт був дуже ніжним")} <br>`);
+
+
