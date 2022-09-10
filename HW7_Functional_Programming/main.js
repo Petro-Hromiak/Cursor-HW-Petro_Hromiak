@@ -7,9 +7,9 @@ function getMyTaxes(salary) {
     // const number = this.tax * salary;
     return this.tax * salary;
 }
-document.writeln(`Сума податку в Україні складає:`, getMyTaxes.call(ukraine, 1000),`<br>`);
-document.writeln(`Сума податку в Латвії складає:`, getMyTaxes.call(latvia, 1000),`<br>`);
-document.writeln(`Сума податку в Литві складає:`, getMyTaxes.call(litva, 1000),`<br>`);
+document.writeln(`Сума податку в Україні складає:`, getMyTaxes.call(ukraine, 1000), `<br>`);
+document.writeln(`Сума податку в Латвії складає:`, getMyTaxes.call(latvia, 1000), `<br>`);
+document.writeln(`Сума податку в Литві складає:`, getMyTaxes.call(litva, 1000), `<br>`);
 
 
 
@@ -17,31 +17,28 @@ function getMiddleTaxes() {
     // const middleTax = this.tax * this.middleSalary;
     return this.tax * this.middleSalary;
 }
-document.writeln(`Середня сума податку в Україні складає:`, getMiddleTaxes.call(ukraine),`<br>`);
-document.writeln(`Середня сума податку в Латвії складає:`, getMiddleTaxes.call(latvia),`<br>`);
-document.writeln(`Середня сума податку в Литві складає:`, getMiddleTaxes.call(litva),`<br>`);
+document.writeln(`Середня сума податку в Україні складає:`, getMiddleTaxes.call(ukraine), `<br>`);
+document.writeln(`Середня сума податку в Латвії складає:`, getMiddleTaxes.call(latvia), `<br>`);
+document.writeln(`Середня сума податку в Литві складає:`, getMiddleTaxes.call(litva), `<br>`);
 
 function getTotalTaxes() {
     // const generalTax = this.tax * this.middleSalary * this.vacancies;
     return this.tax * this.middleSalary * this.vacancies;
 }
-document.writeln(`Загальна сума податку в Україні складає:`, getTotalTaxes.call(ukraine),`<br>`);
-document.writeln(`Загальна сума податку в Латвії складає:`, getTotalTaxes.call(latvia),`<br>`);
-document.writeln(`Загальна сума податку в Литві складає:`, getTotalTaxes.call(litva),`<br>`);
+document.writeln(`Загальна сума податку в Україні складає:`, getTotalTaxes.call(ukraine), `<br>`);
+document.writeln(`Загальна сума податку в Латвії складає:`, getTotalTaxes.call(latvia), `<br>`);
+document.writeln(`Загальна сума податку в Литві складає:`, getTotalTaxes.call(litva), `<br>`);
 
 function getMySalary() {
     let salary = Math.floor(Math.random() * (2000 - 1500) + 1500);
     let taxes = (this.tax * salary).toFixed(1);
     let profit = salary - taxes;
-    let country = this.constructor.name;
     let obj = {
         salary,
         taxes,
         profit
     }
-    // return console.log(`Мій заробіток ${country}`, obj)
-    return obj
-
+    return obj;
 }
 
 setInterval(() => console.log(`Мій заробіток в Україні складає:`, getMySalary.call(ukraine)), 10000);
