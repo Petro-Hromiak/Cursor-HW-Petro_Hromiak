@@ -21,14 +21,57 @@
 // Якщо студента виключено, він не отримує стипендію (думаю це було і так очевидно :) )
 
 class Student {
-    constructor(university, course, fullName) {
+    constructor(university, course, fullName, marks) {
         this.university = university;
         this.course = course;
         this.fullName = fullName;
+        this.marks = marks;
+        this.dismissed = false;
     }
     getinfo() {
         return (`Студент ${this.course} курсу ${this.university}, ${this.fullName}`)
     }
-   
+
+    get getMarks() {
+        if (this.dismissed === true) {
+            return null;
+        }
+        return this.marks;
+    }
+
+    set addMark(mark) {
+        if (this.dismissed === false) {
+            return this.getMarks.push(mark);
+        }
+
+    }
+
+    getAverageMark() {
+        return this.marks.reduce((acc, el) => acc + el) / this.marks.length;
+    }
+
+    dismiss() {
+        this.dismissed = true;
+    }
+
+    recover() {
+        this.dismissed = false;
+
+    }
+
+
 }
 
+const student = new Student(
+    'NYLP',
+    '2',
+    'Petro Hromiak',
+    [5, 4, 4, 5]
+)
+
+
+student.dismiss();
+console.log(student)
+student.recover();
+student.addMark = 5;
+console.log(student)
