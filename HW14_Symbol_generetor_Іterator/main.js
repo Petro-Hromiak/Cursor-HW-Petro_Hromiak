@@ -10,18 +10,6 @@ console.log(idGenerator.next().value);
 console.log(idGenerator.next().value);
 console.log(idGenerator.next().value);
 
-
-// Створіть генератор, який буде регулювати розміри шрифту для вашого сайту. 
-// (Можна допрацювати, щоб реально змінював шрифт, але це не є обов'язковою умовою)
-// Працювати генератор буде наступним чином:
-// const fontGenerator = newFontGenerator(14); // 14 – стартове значення
-// fontGenerator.next("up").value -> 14
-// fontGenerator.next("up").value -> 16
-// fontGenerator.next("up").value -> 18
-// fontGenerator.next().value -> 18
-// fontGenerator.next("down").value -> 16
-
-
 const btnUp = document.getElementById('up');
 const btnDown = document.getElementById('down');
 const text = document.getElementById('text');
