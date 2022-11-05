@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+html {
+    background-image: url(./image/wall.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+button,
+#inputNumber {
+    width: 200px;
+    height: 50px;
+    background-color: rgba(33, 33, 147, 0.57);
+    border: 0;
+    border-radius: 20px;
+    color: rgb(178, 202, 237);
+    font-size: 12px;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+
+}
+
+#inputNumber {
+    width: 100px;
+}
+
+body {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.info {
+    display: flex;
+    padding-top: 30px;
+    justify-content: center;
+}
+
+.divCharacter,
+.planet {
+    max-width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: rgba(33, 33, 147, 0.57);
+    color: rgb(178, 202, 237);
+    font-size: 12px;
+    font-family: 'Press Start 2P', cursive;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btnNavigation {
+    width: 100px;
+    margin: 20px 20px;
+}
